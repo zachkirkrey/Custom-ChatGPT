@@ -6,8 +6,6 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "backend/index.js" },
-      { "src": "/(favicon.ico|robots.txt)", "dest": "/frontend/$1" },
-      { "src": "/static/(.*)", "dest": "/frontend/static/$1" },
-      { "src": "/(.*)", "dest": "/frontend/index.html" }
+      { "src": "/(.*)", "dest": "/frontend/$1" }
     ]
 }
