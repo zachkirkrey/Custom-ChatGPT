@@ -1,12 +1,12 @@
 {
   "version": 2,
   "builds": [
-    { "src": "frontend/package.json", "use": "@vercel/static-build" },
-    { "src": "backend/index.js", "use": "@vercel/node" },
-    { "src": "backend/idiya.csv", "use": "@vercel/static" }
+    { "src": "frontend/package.json", "use": "@vercel/static-build", "config": {"distDir": "build"} },
+    { "src": "backend/index.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/index.js" },
+    { "src": "/backend/idiya.csv", "dest": "/backend/idiya.csv" },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
