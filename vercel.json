@@ -6,7 +6,11 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/index.js" },
-    { "src": "/backend/idiya.csv", "dest": "/backend/idiya.csv" },
     { "src": "/(.*)", "dest": "frontend/$1" }
-  ]
+  ],
+  "static": {
+    "include": [
+      "backend/idiya.csv"
+    ]
+  }
 }
